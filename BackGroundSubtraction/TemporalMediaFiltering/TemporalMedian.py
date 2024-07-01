@@ -31,6 +31,9 @@ for fid in framesIds:
 
 print(np.asarray(frames).shape)
 
-for frame in frames:
-    cv2.imshow('frame', frame)
-    cv2.waitKey(0)
+
+#calculando a mediana (pixel central) das imagens
+medianFrame=np.median(frames, axis=0).astype(dtype=np.uint8)
+
+cv2.imshow('frame medio', medianFrame)
+cv2.waitKey(0)
