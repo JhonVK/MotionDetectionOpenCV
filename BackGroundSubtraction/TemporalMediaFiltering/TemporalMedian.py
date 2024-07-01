@@ -37,3 +37,4 @@ medianFrame=np.median(frames, axis=0).astype(dtype=np.uint8)
 
 cv2.imshow('frame medio', medianFrame)
 cv2.waitKey(0)
+cv2.imwrite('model_median_frame', medianFrame)
